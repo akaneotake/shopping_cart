@@ -7,23 +7,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="">
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    <script src="js/application.js"></script>
-
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
   </head>
   <body>
     <div class="container">
-      <!-- タイトル -->
+      <!-- Title -->
       <div class="row">
         <div class="col-12">
-          <h1>Shopping Cart</h1>
+          <h1 class="text-center">Shopping Cart</h1>
         </div>
       </div>
 
-      <!-- 見出し行 -->
+      <!-- Top row -->
       <div class="row">
         <div class="col-12">
           <table class="table">
@@ -36,24 +32,52 @@
             </colgroup>
             <thead>
               <tr>
-                <th>Item</th>
-                <th>Unit Price</th>
-                <th>Quantity</th>
-                <th>Cost</th>
-                <th></th>
+                <th scope="col">Item</th>
+                <th scope="col">Unit Price</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Cost</th>
+                <th scope="col"></th>
               </tr>
             </thead>
 
-            <!-- 個々のアイテム行 -->
+            <!-- Each items -->
             <tbody>
               <tr>
-                <td>Milk</td>
-                <td>$3.00</td>
-                <td><input /></td>
-                <td></td>
+                <td class="item">Mile</td>
+                <td class="price">$<span>3.00</span></td>
+                <td class="quantity"><input type="number" value="0"/></td>
+                <td class="cost"></td>
                 <td><button class="btn">Remove</button></td>
               </tr>
-              
+              <tr>
+                <td class="item">Eggs</td>
+                <td class="price">$<span>1.40</span></td>
+                <td class="quantity"><input type="number" value="0"/></td>
+                <td class="cost"></td>
+                <td><button class="btn">Remove</button></td>
+              </tr>
+              <tr>
+                <td class="item">Butter</td>
+                <td class="price">$<span>3.80</span></td>
+                <td class="quantity"><input type="number" value="0"/></td>
+                <td class="cost"></td>
+                <td><button class="btn">Remove</button></td>
+              </tr>
+              <tr>
+                <td class="item">Bread</td>
+                <td class="price">$<span>2.50</span></td>
+                <td class="quantity"><input type="number" value="0"/></td>
+                <td class="cost"></td>
+                <td><button class="btn">Remove</button></td>
+              </tr>
+              <tr>
+                <td class="item">Ice cream</td>
+                <td class="price">$<span>4.60</span></td>
+                <td class="quantity"><input type="number" value="0"/></td>
+                <td class="cost"></td>
+                <td><button class="btn">Remove</button></td>
+              </tr>
+
               <!-- アイテム追加 -->
               <tr>
                 <td><input placeholder="new Item" /></td>
@@ -69,11 +93,14 @@
                 <td><p>$0.00</p></td>
               </tr>
 
-
             </tbody>
           </table>
         </div>
+      </div>
+    </div>
 
-
+    <!-- jQuery読み込み -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/application.js"></script>
   </body>
 </html>
