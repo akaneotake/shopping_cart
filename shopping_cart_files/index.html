@@ -15,6 +15,65 @@
     <link href="css/custom.css" rel="stylesheet">
   </head>
   <body>
+    <div class="container">
+      <!-- タイトル -->
+      <div class="row">
+        <div class="col-12">
+          <h1>Shopping Cart</h1>
+        </div>
+      </div>
+
+      <!-- 見出し行 -->
+      <div class="row">
+        <div class="col-12">
+          <table class="table">
+            <colgroup>
+              <col class="col-4">
+              <col class="col-2">
+              <col class="col-2">
+              <col class="col-2">
+              <col class="col-2">
+            </colgroup>
+            <thead>
+              <tr>
+                <th>Item</th>
+                <th>Unit Price</th>
+                <th>Quantity</th>
+                <th>Cost</th>
+                <th></th>
+              </tr>
+            </thead>
+
+            <!-- 個々のアイテム行 -->
+            <tbody>
+              <tr>
+                <td>Milk</td>
+                <td>$3.00</td>
+                <td><input /></td>
+                <td></td>
+                <td><button class="btn">Remove</button></td>
+              </tr>
+              
+              <!-- アイテム追加 -->
+              <tr>
+                <td><input placeholder="new Item" /></td>
+                <td><input placeholder="Price" /></td>
+                <td></td>
+                <td></td>
+                <td><button class="btn">Add</button></td>
+              </tr>
+
+              <!-- 合計 -->
+              <tr>
+                <td><p>TOTAL CART COST</p></td>
+                <td><p>$0.00</p></td>
+              </tr>
+
+
+            </tbody>
+          </table>
+        </div>
+
 
   </body>
 </html>
