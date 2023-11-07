@@ -22,3 +22,8 @@ $('#addBtn button').click(function() {
   $('#newPrice input').val('');
 });
 
+// Remove Items
+$('.removeBtn button').click(function() {
+  var itemList = $(this).parent().parent();
+  $(itemList).remove();
+});
