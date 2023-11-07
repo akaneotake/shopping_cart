@@ -11,3 +11,14 @@ $(document).on('input', '.quantity input', function() {
   };
 });
 
+// Add Items
+$('#addBtn button').click(function() {
+  var newItem = $('#newItem input').val();
+  var newPrice = $('#newPrice input').val();
+  $('#addItems').before('<tr><td class="item">' + newItem + '</td><td class="price">$<span>' + newPrice +'</span></td><td class="quantity"><input type="number" value="0"/></td><td class="cost"></td><td><button class="btn">Remove</button></td></tr>');
+
+  // Delete the input value after add
+  $('#newItem input').val('');
+  $('#newPrice input').val('');
+});
+
