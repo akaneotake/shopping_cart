@@ -21,21 +21,14 @@
       <!-- Top row -->
       <div class="row">
         <div class="col-12">
-          <table class="table">
-            <colgroup>
-              <col class="col-4">
-              <col class="col-2">
-              <col class="col-2">
-              <col class="col-2">
-              <col class="col-2">
-            </colgroup>
+          <table class="table table-responsive">
             <thead>
               <tr>
-                <th scope="col">Item</th>
-                <th scope="col">Unit Price</th>
-                <th scope="col">Quantity</th>
-                <th scope="col">Cost</th>
-                <th scope="col"></th>
+                <th style="width: 40%">Item</th>
+                <th style="width: 15%">Unit Price</th>
+                <th style="width: 15%">Quantity</th>
+                <th style="width: 15%">Cost</th>
+                <th style="width: 15%"></th>
               </tr>
             </thead>
 
@@ -46,50 +39,53 @@
                 <td class="price">$<span>3.00</span></td>
                 <td class="quantity"><input type="number" value="0"/></td>
                 <td class="cost"></td>
-                <td class="removeBtn"><button class="btn">Remove</button></td>
+                <td class="removeBtn"><button class="btn btn-sm">Remove</button></td>
               </tr>
               <tr class="itemList">
                 <td class="item">Eggs</td>
                 <td class="price">$<span>1.40</span></td>
                 <td class="quantity"><input type="number" value="0"/></td>
                 <td class="cost"></td>
-                <td class="removeBtn"><button class="btn">Remove</button></td>
+                <td class="removeBtn"><button class="btn btn-sm">Remove</button></td>
               </tr>
               <tr class="itemList">
                 <td class="item">Butter</td>
                 <td class="price">$<span>3.80</span></td>
                 <td class="quantity"><input type="number" value="0"/></td>
                 <td class="cost"></td>
-                <td class="removeBtn"><button class="btn">Remove</button></td>
+                <td class="removeBtn"><button class="btn btn-sm">Remove</button></td>
               </tr>
               <tr class="itemList">
                 <td class="item">Bread</td>
                 <td class="price">$<span>2.50</span></td>
                 <td class="quantity"><input type="number" value="0"/></td>
                 <td class="cost"></td>
-                <td class="removeBtn"><button class="btn">Remove</button></td>
+                <td class="removeBtn"><button class="btn btn-sm">Remove</button></td>
               </tr>
               <tr class="itemList">
                 <td class="item">Ice cream</td>
                 <td class="price">$<span>4.60</span></td>
                 <td class="quantity"><input type="number" value="0"/></td>
                 <td class="cost"></td>
-                <td class="removeBtn"><button class="btn">Remove</button></td>
+                <td class="removeBtn"><button class="btn btn-sm">Remove</button></td>
               </tr>
 
               <!-- Add Items -->
               <tr id="addItems">
-                <td id="newItem"><input type="text" placeholder="new Item" value=""/></td>
-                <td id="newPrice"><input type="number" placeholder="Price" value=""/></td>
+                <td id="newItem"><input type="text" placeholder=" new Item" value=""/></td>
+                <td id="newPrice"><input type="number" placeholder=" Price" value=""/></td>
                 <td></td>
                 <td></td>
-                <td id="addBtn"><button class="btn">Add</button></td>
+                <td id="addBtn"><button style="width: 65px;" class="btn btn-sm btn-danger">Add</button></td>
               </tr>
-              
+
               <!-- Total Cost -->
               <tr>
-                <td>TOTAL COST</td>
-                <td id="totalCost">$<span>0.00</span></td>
+                <td style="font-size: 16px; color: #d43f3a;"><strong>TOTAL COST</strong></td>
+                <td id="totalCost" style="font-size: 16px;"><strong>$<span>0.00</span></strong></td>
+                <td></td>
+                <td></td>
+                <td></td>
               </tr>
 
             </tbody>

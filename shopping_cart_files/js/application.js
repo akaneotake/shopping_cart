@@ -33,18 +33,69 @@ $(document).on('input', '.quantity input', function() {
 //////////////////////////////////////////////
 
 
-// Add Items
-$(document).on('click', '#addBtn button', function() {
-  var newItem = $('#newItem input').val();
-  var newPrice = Number($('#newPrice input').val()).toFixed(2);
-  $('#addItems').before('<tr class="itemList"><td class="item">' + newItem + '</td><td class="price">$<span>' + newPrice +'</span></td><td class="quantity"><input type="number" value="0"/></td><td class="cost"></td><td class="removeBtn"><button class="btn">Remove</button></td></tr>');
-  // Delete the input value after add
-  $('#newItem input').val('');
-  $('#newPrice input').val('');
-});
 
-// Remove Items
-$(document).on('click', '.removeBtn button',(function() {
-  var itemList = $(this).parent().parent();
-  $(itemList).remove();
-}));
+
+
+
+
+
+
+
+// function for sum
+var sum = function(acc, x) {
+  return acc + x;
+};
+
+// Update the Total Cost
+var updateTotalCost = function() {
+  var costs = [];
+
+  $('tbody tr').each(function(i, ele) {
+    var newCost = updateSubtotal();
+    costs.push(newCost);
+  });
+
+  var totalCost = costs.reduce(sum);
+
+  $('#totalCost span').html(totalCost);
+};
+
+
+
+
+
+// When DOM is ready:
+$(document).ready(function() {
+  // Update Total Cost
+  updateTotalCost();
+
+  // Remove Items
+  $(document).on('click', '.removeBtn button',(function() {
+    var itemList = $(this).parent().parent();
+    $(itemList).remove();
+  }));
+
+
+  // Update Total Cost by input
+  var timeout;
+  $(document).on('input', 'tr input', function() {
+    clearTimeout(timeout);
+    timeout = setTimeout(function() {
+      updateTotalCost();
+    }, 1000);
+  });
+
+
+  // Add Items
+  $(document).on('click', '#addBtn button', function() {
+    var newItem = $('#newItem input').val();
+    var newPrice = Number($('#newPrice input').val()).toFixed(2);
+    $('#addItems').before('<tr class="itemList"><td class="item">' + newItem + '</td><td class="price">$<span>' + newPrice +'</span></td><td class="quantity"><input type="number" value="0"/></td><td class="cost"></td><td class="removeBtn"><button class="btn btn-sm">Remove</button></td></tr>');
+
+    updateTotalCost();
+
+    // Delete the input value after add
+    $('#newItem input').val('');
+    $('#newPrice input').val('');
+  });
+});
