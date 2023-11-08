@@ -9,6 +9,7 @@ $(document).on('input', '.quantity input', function() {
     $(cost).html('$<span>' + newCost + '</span>');
   } else if (quantity === '') {
     $(cost).html('');
+    // Quantityの入力やめたとき0に戻す？
   };
   return cost;
  });
@@ -70,7 +71,7 @@ $(document).ready(function() {
   updateTotalCost();
 
   // Remove Items
-  $(document).on('click', '.removeBtn button',(function() {
+  $(document).on('click', '.remove i',(function() {
     var itemList = $(this).parent().parent();
     $(itemList).remove();
   }));
@@ -90,7 +91,7 @@ $(document).ready(function() {
   $(document).on('click', '#addBtn button', function() {
     var newItem = $('#newItem input').val();
     var newPrice = Number($('#newPrice input').val()).toFixed(2);
-    $('#addItems').before('<tr class="itemList"><td class="item">' + newItem + '</td><td class="price">$<span>' + newPrice +'</span></td><td class="quantity"><input type="number" value="0"/></td><td class="cost"></td><td class="removeBtn"><button class="btn btn-sm">Remove</button></td></tr>');
+    $('#addItems').before('<tr class="itemList"><td class="item">' + newItem + '</td><td class="price">$<span>' + newPrice +'</span></td><td class="quantity"><input type="number" value="0"/></td><td class="cost"></td><td class="remove"><i class="fa-regular fa-trash-can"></i></i></td></tr>');
 
     updateTotalCost();
 

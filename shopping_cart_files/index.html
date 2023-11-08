@@ -9,6 +9,8 @@
     <meta name="author" content="">
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/custom.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/fe1102712b.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <div class="container">
@@ -21,7 +23,7 @@
       <!-- Top row -->
       <div class="row">
         <div class="col-12">
-          <table class="table table-responsive">
+          <table class="table table-responsive my-table">
             <thead>
               <tr>
                 <th style="width: 40%">Item</th>
@@ -39,35 +41,35 @@
                 <td class="price">$<span>3.00</span></td>
                 <td class="quantity"><input type="number" value="0"/></td>
                 <td class="cost"></td>
-                <td class="removeBtn"><button class="btn btn-sm">Remove</button></td>
+                <td class="remove"><i class="fa-regular fa-trash-can"></i></td>
               </tr>
               <tr class="itemList">
                 <td class="item">Eggs</td>
                 <td class="price">$<span>1.40</span></td>
                 <td class="quantity"><input type="number" value="0"/></td>
                 <td class="cost"></td>
-                <td class="removeBtn"><button class="btn btn-sm">Remove</button></td>
+                <td class="remove"><i class="fa-regular fa-trash-can"></i></td>
               </tr>
               <tr class="itemList">
                 <td class="item">Butter</td>
                 <td class="price">$<span>3.80</span></td>
                 <td class="quantity"><input type="number" value="0"/></td>
                 <td class="cost"></td>
-                <td class="removeBtn"><button class="btn btn-sm">Remove</button></td>
+                <td class="remove"><i class="fa-regular fa-trash-can"></i></td>
               </tr>
               <tr class="itemList">
                 <td class="item">Bread</td>
                 <td class="price">$<span>2.50</span></td>
                 <td class="quantity"><input type="number" value="0"/></td>
                 <td class="cost"></td>
-                <td class="removeBtn"><button class="btn btn-sm">Remove</button></td>
+                <td class="remove"><i class="fa-regular fa-trash-can"></i></td>
               </tr>
               <tr class="itemList">
                 <td class="item">Ice cream</td>
                 <td class="price">$<span>4.60</span></td>
                 <td class="quantity"><input type="number" value="0"/></td>
                 <td class="cost"></td>
-                <td class="removeBtn"><button class="btn btn-sm">Remove</button></td>
+                <td class="remove"><i class="fa-regular fa-trash-can"></i></td>
               </tr>
 
               <!-- Add Items -->
@@ -76,7 +78,7 @@
                 <td id="newPrice"><input type="number" placeholder=" Price" value=""/></td>
                 <td></td>
                 <td></td>
-                <td id="addBtn"><button style="width: 65px;" class="btn btn-sm btn-danger">Add</button></td>
+                <td id="addBtn"><button style="width: 75%;" class="btn btn-sm btn-danger">Add</button></td>
               </tr>
 
               <!-- Total Cost -->
