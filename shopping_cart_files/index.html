@@ -18,7 +18,6 @@
           <h1 class="text-center">Shopping Cart</h1>
         </div>
       </div>
-
       <!-- Top row -->
       <div class="row">
         <div class="col-12">
@@ -78,7 +77,7 @@
                 <td class="removeBtn"><button class="btn">Remove</button></td>
               </tr>
 
-              <!-- アイテム追加 -->
+              <!-- Add Items -->
               <tr id="addItems">
                 <td id="newItem"><input type="text" placeholder="new Item" value=""/></td>
                 <td id="newPrice"><input type="number" placeholder="Price" value=""/></td>
@@ -86,11 +85,11 @@
                 <td></td>
                 <td id="addBtn"><button class="btn">Add</button></td>
               </tr>
-
-              <!-- 合計 -->
+              
+              <!-- Total Cost -->
               <tr>
-                <td><p>TOTAL CART COST</p></td>
-                <td><p>$0.00</p></td>
+                <td>TOTAL COST</td>
+                <td id="totalCost">$<span>0.00</span></td>
               </tr>
 
             </tbody>
@@ -99,7 +98,7 @@
       </div>
     </div>
 
-    <!-- jQuery読み込み -->
+    <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="js/application.js"></script>
   </body>
